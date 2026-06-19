@@ -175,3 +175,53 @@
 ├─────────────────────────────────────────────┤
 │ git push -u origin main                     │
 └─────────────────────────────────────────────┘
+
+
+Hari Laptop
+   │
+   └── push → one
+
+Partner Laptop
+   │
+   └── push → partner
+
+
+GitHub
+├── one
+├── partner
+└── main
+
+      │
+      ▼
+Hari (અથવા maintainer)
+
+git checkout main
+git merge one
+git merge partner
+git push origin main
+
+      │
+      ▼
+
+GitHub main updated
+
+      │
+      ▼
+
+Partner
+
+git pull origin main
+
+
+-----------------------------
+Partner નો code જોવા
+→ git fetch origin
+→ git checkout partner
+
+બંને code main માં લાવવા
+→ git checkout main
+→ git merge partner
+→ git push origin main
+
+બીજા laptop માં લાવવા
+→ git pull origin main
